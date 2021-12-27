@@ -1,0 +1,4 @@
+---
+image_name: openshift-hastebin
+labels:
+  maintainer: 'jesse@weisner.ca'
