@@ -1,3 +1,4 @@
 #!/bin/sh
 echo "testing..."
-du -hs /app
+echo "testing!" > /app/h.html
+du -hs /app >>  /app/h.html
