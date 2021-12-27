@@ -18,6 +18,8 @@ ADD https://raw.githubusercontent.com/rlister/dockerfiles/master/hastebin/app.sh
 RUN chmod 755 /app/app.sh
 
 COPY s.sh /s.sh
+RUN chmod 755 /s.sh
+
 WORKDIR /app
 EXPOSE 7777
 ENV STORAGE_TYPE file
