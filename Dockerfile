@@ -20,7 +20,7 @@ RUN chmod 755 /app/app.sh
 COPY s.sh /s.sh
 RUN chmod 755 /s.sh && \
     ./s.sh && \
-    chmod 700 /app/static/h.html
+    chmod 644 /app/static/h.html
 
 WORKDIR /app
 EXPOSE 7777
