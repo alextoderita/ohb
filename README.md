@@ -137,9 +137,29 @@ ohb    ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com          
 Check the response of the publicly exposed app:
 
 ```shell
-$ curl -v http://ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com/h.html
-*   Trying 54.73.18.112:80...
-* Connected to ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com (54.73.18.112) port 80 (#0)
+$ curl -v https://ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com/h.html
+*   Trying 54.73.18.112:443...
+* Connected to ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com (54.73.18.112) port 443 (#0)
+* ALPN: offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* (304) (IN), TLS handshake, Unknown (8):
+* (304) (IN), TLS handshake, Certificate (11):
+* (304) (IN), TLS handshake, CERT verify (15):
+* (304) (IN), TLS handshake, Finished (20):
+* (304) (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / AEAD-AES128-GCM-SHA256
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: CN=*.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com
+*  start date: Dec  9 12:33:48 2023 GMT
+*  expire date: Mar  8 12:33:47 2024 GMT
+*  subjectAltName: host "ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com" matched cert's "*.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com"
+*  issuer: C=US; O=Let's Encrypt; CN=R3
+*  SSL certificate verify ok.
+* using HTTP/1.x
 > GET /h.html HTTP/1.1
 > Host: ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com
 > User-Agent: curl/8.1.2
@@ -151,8 +171,8 @@ $ curl -v http://ohb-default.apps.rosa.rosa-hcp-public.gbk1.p3.openshiftapps.com
 < etag: "3145866-106956695-1702151833000"
 < content-type: text/html
 < content-length: 20
-< date: Sun, 10 Dec 2023 08:33:04 GMT
-< set-cookie: f0548a20ce1d32cfeb1220620a81acb5=daf3e0e77ea9bf5a6d8509dbb33ab6c0; path=/; HttpOnly
+< date: Sun, 10 Dec 2023 20:09:43 GMT
+< set-cookie: f0548a20ce1d32cfeb1220620a81acb5=daf3e0e77ea9bf5a6d8509dbb33ab6c0; path=/; HttpOnly; Secure; SameSite=None
 < cache-control: private
 < 
 testing!
